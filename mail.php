@@ -1,21 +1,21 @@
 <?php
 //get data from form  
 $name = $_POST['fullName'];
-$email = $_POST['Email'];
-$subject = $_POST['Subject'];
-$message = $_POST['Message'];
+$email = $_POST['email'];
+$phone = $_POST['number'];
+$message = $_POST['message'];
 
 $to = "happy.mood.ac@gmail.com";
 $subject = "Mail From website";
-$txt = "Name = " . $name . "\r\n  Email = " . $email . "\r\n Subject =" . $subject . "\r\n Message =" . $message;
-$headers = "From: noreply@yoursite.com" . "\r\n" .
+$txt = "Name = " . $name . "\r\n  Email = " . $email . "\r\n Phone number =" . $phone. "\r\n Message =" . $message;
+$headers = "From: noreply@google.com" . "\r\n" .
     "CC: somebodyelse@example.com";
 
 if ($email != NULL) {
     mail($to, $subject, $txt, $headers);
 }
 //redirect
-header("Location:thankyou.html");
+header("Location: thankyou.html");
 
 // <form action="mail.php" method="post">
 //     <label for="name">Your Name</label>
