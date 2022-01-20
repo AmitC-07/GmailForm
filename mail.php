@@ -11,9 +11,9 @@ $txt = "Name = " . $name . "\r\n  Email = " . $email . "\r\n Phone number =" . $
 $headers = "From: noreply@google.com" . "\r\n" .
     "CC: somebodyelse@example.com";
 
-if ($email != NULL) {
+// if ($email != NULL) {
     mail($to, $subject, $txt, $headers);
-}
+// }
 //redirect
 header("Location: thankyou.html");
 
@@ -27,3 +27,4 @@ header("Location: thankyou.html");
 //     <textarea  name="message" placeholder="Write something.." style="height:200px"></textarea>
 //     <input type="submit" value="Submit">
 //   </form>
+?>
